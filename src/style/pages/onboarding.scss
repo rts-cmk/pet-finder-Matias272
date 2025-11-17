@@ -1,0 +1,29 @@
+// ----- Onboarding -----
+.onboarding {
+  padding: 10px 15px;
+  height: 100vh;
+  .onboarding__img {
+    display: flex;
+    justify-content: center;
+    img {
+      max-width: 500px;
+      width: 100%;
+    }
+  }
+}
+.onboarding__text {
+  text-align: center;
+  h2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+    font-weight: 900;
+    color: #333;
+  }
+  p  {
+    margin-bottom: 120px;
+    color: #828282;
+  }
+  button {
+    
+  }
+}
