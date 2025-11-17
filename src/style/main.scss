@@ -1,0 +1,37 @@
+// ----- Imports -----
+@use 'components.scss';
+@use 'varibles.scss' as *;
+// ----- Resets -----
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body {
+    font-family: $page-font;
+    background-color: $page-back-color;
+}
+a {
+    text-decoration: none;
+}
+button {
+    border: none;
+}
+ul {
+    list-style: none;
+}
+// ----- Page Styling -----
+.page__wrapper {
+    max-width: 768px;
+    margin: 0 auto;
+}
+h2 {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #333;
+}
+button {
+
+}
+// Layout
+
