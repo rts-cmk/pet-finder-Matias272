@@ -3,6 +3,7 @@
   padding: 10px 15px;
   height: 100vh;
   .onboarding__img {
+    margin-bottom: 50px;
     display: flex;
     justify-content: center;
     img {
@@ -20,10 +21,7 @@
     color: #333;
   }
   p  {
-    margin-bottom: 120px;
+    margin-bottom: 70px;
     color: #828282;
-  }
-  button {
-    
   }
 }
