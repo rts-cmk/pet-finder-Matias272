@@ -1,31 +1,33 @@
-import { createBrowserRouter, Route, RouterProvider, Routes, useNavigate } from "react-router";
-import { useEffect } from "react";
+// App.jsx
+import { createBrowserRouter, RouterProvider, redirect } from "react-router";
 
 import "./style/main.scss";
 import Onboarding from "./pages/Onboarding";
 import Home from "./pages/Home";
-import Details from "./pages/Details"
-//
+import Details from "./pages/Details";
 import petsLoader from "./loaders/loader";
+
+function rootLoader() {
+  const hasSeen = localStorage.getItem("visited");
+
+  if (!hasSeen) {
+    return redirect("/onboarding");
+  }
+
+  return petsLoader();
+}
 
 export default function App() {
   const petRouter = createBrowserRouter([
     {
-      path: "/onboarding",
-      element: <Onboarding />
-    },
-    {
       path: "/",
       element: <Home />,
-      loader: petsLoader,
-      hydrateFallbackElement: <p>Loading...</p>
+      loader: rootLoader,
+      hydrateFallbackElement: <h2>Loading...</h2>,
     },
-    {
-      path: "/details:petId",
-      element: <Details />
-    }
-  ])
-  
+    { path: "/details:petId", element: <Details /> },
+    { path: "/onboarding", element: <Onboarding /> },
+  ]);
 
   return (
     <div className="page__wrapper">

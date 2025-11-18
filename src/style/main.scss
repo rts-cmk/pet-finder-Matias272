@@ -22,10 +22,12 @@ button {
 ul {
   list-style: none;
 }
+h3 {
+  font-size: 20px;
+  color: $title-color;
+}
 // ----- Page Styling -----
 .page__wrapper {
   max-width: 768px;
   margin: 0 auto;
 }
-
-

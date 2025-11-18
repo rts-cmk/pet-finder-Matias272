@@ -65,10 +65,7 @@
   width: 40px;
   height: 40px;
   border-radius: 100%;
-  box-shadow: -5px -5px 1px rgba(255, 255, 255, 0.5);
-  box-shadow: 5px 5px 10px  rgba(170, 170, 204, 0.25);
-  box-shadow: 10px 10px 20px  rgba(170, 170, 204, 0.5);
-  box-shadow: -10px -10px 20px  rgba(255, 255, 255, 1);
+  box-shadow: $box-shadow;
 }
 // ----- Button__vegetta -----
 .button__vegetta {

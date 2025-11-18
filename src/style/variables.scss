@@ -1,6 +1,11 @@
 // Font
 @import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
 $page-font: "Lato", sans-serif;
+// Box-shadow
+$box-shadow: -5px -5px 1px 0px rgba(255, 255, 255, 0.5),
+  5px 5px 10px 0px rgba(170, 170, 204, 0.25),
+  10px 10px 20px 0px rgba(170, 170, 204, 0.5),
+  -10px -10px 20px 0px rgba(255, 255, 255, 1);
 // Colors
 $page-back-color: #f5f5fa;
 $buttons-color: #f5f5fa;

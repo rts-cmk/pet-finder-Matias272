@@ -1,6 +1,6 @@
 import { NavLink } from "react-router";
 import Buttons from "./Buttons";
-export default function () {
+export default function NavBar() {
   return (
     <nav className="navbar">
       <ul className="navbar__ul">
