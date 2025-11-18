@@ -5,6 +5,8 @@ import "./style/main.scss";
 import Onboarding from "./pages/Onboarding";
 import Home from "./pages/Home";
 import Details from "./pages/Details"
+//
+import petsLoader from "./loaders/loader";
 
 export default function App() {
   const petRouter = createBrowserRouter([
@@ -14,7 +16,9 @@ export default function App() {
     },
     {
       path: "/",
-      element: <Home />
+      element: <Home />,
+      loader: petsLoader,
+      hydrateFallbackElement: <p>Loading...</p>
     },
     {
       path: "/details:petId",
