@@ -1,28 +1,31 @@
-import { Route, Routes, useNavigate } from "react-router";
+import { createBrowserRouter, Route, RouterProvider, Routes, useNavigate } from "react-router";
 import { useEffect } from "react";
 
 import "./style/main.scss";
 import Onboarding from "./pages/Onboarding";
 import Home from "./pages/Home";
+import Details from "./pages/Details"
 
 export default function App() {
-  const navigate = useNavigate();
-
-  useEffect(() => {
-    const visited = localStorage.getItem("visited");
-    if (!visited) {
-      localStorage.setItem("visited", "true");
-      navigate("/Onboarding", { replace: true });
+  const petRouter = createBrowserRouter([
+    {
+      path: "/onboarding",
+      element: <Onboarding />
+    },
+    {
+      path: "/",
+      element: <Home />
+    },
+    {
+      path: "/details:petId",
+      element: <Details />
     }
-  }, [navigate]);
+  ])
+  
 
   return (
     <div className="page__wrapper">
-      <Routes>
-        <Route path="/Onboarding" element={<Onboarding />} />
-        <Route path="/" element={<Home />} />
-        <Route path="*" element={<h1>Page not Found 404</h1>} />
-      </Routes>
+      <RouterProvider router={petRouter} />
     </div>
   );
 }

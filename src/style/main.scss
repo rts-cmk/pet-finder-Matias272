@@ -1,5 +1,6 @@
 // ----- Imports -----
 @use "pages/onboarding.scss";
+@use "pages/home.scss";
 @use "components.scss";
 @use "variables.scss" as *;
 // ----- Resets -----
@@ -27,6 +28,4 @@ ul {
   margin: 0 auto;
 }
 
-
-// ----- HomePage -----
 
