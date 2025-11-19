@@ -69,6 +69,9 @@
   border-top-right-radius: 25px;
   background-color: $page-back-color;
   a.active {
+    button {
+      box-shadow: $box-shadow-active;
+    }
     path {
       fill: $button-active-color;
     }
