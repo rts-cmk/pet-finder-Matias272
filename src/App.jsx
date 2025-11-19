@@ -1,20 +1,25 @@
-// App.jsx
+// ----- Imports -----
 import { createBrowserRouter, RouterProvider, redirect } from "react-router";
-
+// Style
 import "./style/main.scss";
+// Pages
 import Onboarding from "./pages/Onboarding";
 import Home from "./pages/Home";
 import Details from "./pages/Details";
-import petsLoader from "./loaders/loader";
+//Loaders
+import petsLoader from "./loaders/petsLoader";
+import userLoader from "./loaders/userLoader";
+import petDetailLoader from "./loaders/petDetailLoader";
 
-function rootLoader() {
+async function rootLoader() {
   const hasSeen = localStorage.getItem("visited");
 
   if (!hasSeen) {
     return redirect("/onboarding");
   }
 
-  return petsLoader();
+  const [pets, user] = await Promise.all([petsLoader(), userLoader()]);
+  return { pets, user };
 }
 
 export default function App() {
@@ -25,7 +30,7 @@ export default function App() {
       loader: rootLoader,
       hydrateFallbackElement: <h2>Loading...</h2>,
     },
-    { path: "/details:petId", element: <Details /> },
+    { path: "/details/:petId", element: <Details />, loader: petDetailLoader },
     { path: "/onboarding", element: <Onboarding /> },
   ]);
 
