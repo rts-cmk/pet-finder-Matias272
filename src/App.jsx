@@ -2,14 +2,15 @@
 import { createBrowserRouter, RouterProvider, redirect } from "react-router";
 // Style
 import "./style/main.scss";
-// Pages
-import Onboarding from "./pages/Onboarding";
-import Home from "./pages/Home";
-import Details from "./pages/Details";
 //Loaders
 import petsLoader from "./loaders/petsLoader";
 import userLoader from "./loaders/userLoader";
 import petDetailLoader from "./loaders/petDetailLoader";
+// Pages
+import Onboarding from "./pages/Onboarding";
+import Home from "./pages/Home";
+import Details from "./pages/Details";
+import Profile from "./pages/profile";
 
 async function rootLoader() {
   const hasSeen = localStorage.getItem("visited");
@@ -32,6 +33,7 @@ export default function App() {
     },
     { path: "/details/:petId", element: <Details />, loader: petDetailLoader },
     { path: "/onboarding", element: <Onboarding /> },
+    { path: `/profile`, element: <Profile />, loader: userLoader}
   ]);
 
   return (

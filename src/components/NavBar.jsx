@@ -77,7 +77,7 @@ export default function NavBar() {
           </NavLink>
         </li>
         <li>
-          <NavLink to={"2"}>
+          <NavLink to="/profile">
             <Buttons
               src={
                 <svg

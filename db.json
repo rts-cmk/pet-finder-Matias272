@@ -1,7 +1,8 @@
 {
     "user": {
         "image": "http://localhost:3000/filebucket/user.jpg",
-        "location": "New York City"
+        "location": "New York City",
+        "name": "Matilde Jørgensen"
     },
     "dogs": [
         {
