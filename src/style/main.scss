@@ -1,7 +1,9 @@
 // ----- Imports -----
 @use "pages/onboarding.scss";
 @use "pages/home.scss";
+@use "pages/details.scss";
 @use "components.scss";
+// Var
 @use "variables.scss" as *;
 // ----- Resets -----
 * {

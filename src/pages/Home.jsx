@@ -15,7 +15,7 @@ export default function Home() {
         {categories.map((category) => {
           return (
             <li key={category}>
-              <button>{category}</button>
+              <button className="category">{category}</button>
             </li>
           );
         })}

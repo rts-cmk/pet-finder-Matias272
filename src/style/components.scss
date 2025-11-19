@@ -68,11 +68,17 @@
   border-top-left-radius: 25px;
   border-top-right-radius: 25px;
   background-color: $page-back-color;
+  a.active {
+    path {
+      fill: $button-active-color;
+    }
+  }
 }
 .navbar__ul {
   display: flex;
   justify-content: space-evenly;
 }
+
 // ----- Buttons -----
 .buttons {
   background-color: $buttons-color;
@@ -92,8 +98,8 @@
   cursor: pointer;
   padding: 15px 0;
   max-width: 350px;
-  border-radius: 25px;
   width: 100%;
+  border-radius: 25px;
   color: white;
   background-color: $vegetta-color;
   box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);

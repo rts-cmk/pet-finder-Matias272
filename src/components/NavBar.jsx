@@ -5,7 +5,7 @@ export default function NavBar() {
     <nav className="navbar">
       <ul className="navbar__ul">
         <li>
-          <NavLink>
+          <NavLink to="/">
             <Buttons
               src={
                 <svg
@@ -33,7 +33,7 @@ export default function NavBar() {
           </NavLink>
         </li>
         <li>
-          <NavLink>
+          <NavLink to={"w"}>
             <Buttons
               src={
                 <svg
@@ -55,7 +55,7 @@ export default function NavBar() {
           </NavLink>
         </li>
         <li>
-          <NavLink>
+          <NavLink to={"2"}>
             <Buttons
               src={
                 <svg
@@ -77,7 +77,7 @@ export default function NavBar() {
           </NavLink>
         </li>
         <li>
-          <NavLink>
+          <NavLink to={"2"}>
             <Buttons
               src={
                 <svg

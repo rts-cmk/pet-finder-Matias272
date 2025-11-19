@@ -6,14 +6,12 @@ export default function Details() {
   const petDetails = useLoaderData();
 
   return (
-    <div className="detailspage_wrapper">
-      <section>
-        <div>
-          <img src={petDetails.image} alt="" />
-        </div>
+    <div className="detailspage__wrapper">
+      <section className="details__top">
+        <img src={petDetails.image} alt="" />
         <div></div>
       </section>
-      <section>
+      <section className="details__bottom">
         <h2>{petDetails.breed}</h2>
         <p className="pet__card__location">
           <svg
@@ -37,21 +35,27 @@ export default function Details() {
           <li>
             <Buttons
               src={
-                <img src="src/assets/img/icons/pawprint.svg" alt="pawprint" />
+                <img src="/src/assets/img/icons/pawprint.svg" alt="pawprint" />
               }
             />
             {petDetails.breed}
           </li>
           <li>
-            <Buttons />
+            <Buttons
+              src={
+                <img src="/src/assets/img/icons/gender.svg" alt="pawprint" />
+              }
+            />
             {petDetails.gender}
           </li>
         </ul>
-        <p>{petDetails.long_description}</p>
+        <p className="details__des">{petDetails.long_description}</p>
+        <div className="details__backbtn">
+          <Link to={"/"}>
+            <ButtonVegetta text={"Back"} />
+          </Link>
+        </div>
       </section>
-      <Link to={"/"}>
-        <ButtonVegetta text={"Back"} />
-      </Link>
     </div>
   );
 }

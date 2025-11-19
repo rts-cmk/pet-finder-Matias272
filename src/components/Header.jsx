@@ -13,10 +13,10 @@ export default function Header({ user }) {
           <select>
             <option value="New York">{user.location}</option>
           </select>
-            <img
-              src="./src/assets/img/icons/alarm.svg"
-              alt="select location symbol"
-            />
+          <img
+            src="./src/assets/img/icons/alarm.svg"
+            alt="select location symbol"
+          />
         </figcaption>
       </figure>
 
