@@ -1,0 +1,36 @@
+// ----- Imports -----
+@use "pages/onboarding.scss";
+@use "pages/home.scss";
+@use "pages/details.scss";
+@use "components.scss";
+@use "pages/profile.scss";
+// Var
+@use "variables.scss" as *;
+// ----- Resets -----
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+body {
+  font-family: $page-font;
+  background-color: $page-back-color;
+}
+a {
+  text-decoration: none;
+}
+button {
+  border: none;
+}
+ul {
+  list-style: none;
+}
+h3 {
+  font-size: 20px;
+  color: $title-color;
+}
+// ----- Page Styling -----
+.page__wrapper {
+  max-width: 768px;
+  margin: 0 auto;
+}
