@@ -1,0 +1,109 @@
+// Variables
+@use "variables.scss" as *;
+// ----- Header -----
+.header {
+  padding: 10px 15px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.header__user {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+.header__user__img {
+  border-radius: 100%;
+  width: 40px;
+  height: 40px;
+  background-color: gray;
+  img {
+    border-radius: 100%;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+}
+.header__user__location {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+  img {
+    width: 16px;
+  }
+  select {
+    cursor: pointer;
+    width: 100px;
+    appearance: none;
+    font-size: 15px;
+    color: $title-color;
+    border: none;
+    background-color: $page-back-color;
+  }
+}
+.header__ntf {
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  background-color: $buttons-color;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+  img {
+    display: flex;
+    margin: auto;
+  }
+}
+
+// ----- NavBar -----
+.navbar {
+  position: fixed;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  max-width: 768px;
+  width: 100%;
+  box-shadow: $box-shadow;
+  padding: 30px 0;
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: $page-back-color;
+  a.active {
+    button {
+      box-shadow: $box-shadow-active;
+    }
+    path {
+      fill: $button-active-color;
+    }
+  }
+}
+.navbar__ul {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+// ----- Buttons -----
+.buttons {
+  background-color: $buttons-color;
+  width: 40px;
+  height: 40px;
+  border-radius: 100%;
+  box-shadow: $box-shadow;
+}
+.buttons:hover {
+  cursor: pointer;
+}
+// ----- Button__vegetta -----
+.button__vegetta {
+  font-family: $page-font;
+  font-weight: 550;
+  font-size: 16px;
+  cursor: pointer;
+  padding: 15px 0;
+  max-width: 350px;
+  width: 100%;
+  border-radius: 25px;
+  color: white;
+  background-color: $vegetta-color;
+  box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.25);
+}
